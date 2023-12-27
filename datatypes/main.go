@@ -2,17 +2,28 @@ package main
 
 import "fmt"
 
+type Person struct {
+	name        string
+	phoneNumber int
+}
+
+func sayName(person Person) string {
+	p := person
+	return p.name
+
+}
+
 func main() {
 	// var is used to declare variable
-	var integer int
-	// var boolean bool
-	// var name string
-	// infered aaignment with theshort assignment operator
-	boolean := true // short assignement for booleans
-	var name = "hello"
-	floating := 2.3
-	// declaring multiple variables on the same line
-	age, lastName := 2, "wade"
+	// var integer int
+	// // var boolean bool
+	// // var name string
+	// // infered aaignment with theshort assignment operator
+	// boolean := true // short assignement for booleans
+	// var name = "hello"
+	// floating := 2.3
+	// // declaring multiple variables on the same line
+	// age, lastName := 2, "wade"
 
 	// TYPE SIZES
 	// Ints, uints, floats, and complex numbers all have type sizes.
@@ -79,5 +90,34 @@ func main() {
 	//     fmt.Println("You are not tall enough!")
 	// }
 
-	fmt.Println(integer, boolean, name, floating, age, lastName)
+	// 	THE INITIAL STATEMENT OF AN IF BLOCK
+	// An if conditional can have an "initial" statement. The variable(s) created in the initial statement are only defined within the scope of the if body.
+
+	// if INITIAL_STATEMENT; CONDITION {
+	// }
+	// WHY WOULD I USE THIS?
+	// This is just some syntactic sugar that Go offers to shorten up code in some cases. For example, instead of writing:
+
+	// length := getLength(email)
+	// if length < 1 {
+	//     fmt.Println("Email is invalid")
+	// }
+	// We can do:
+
+	// if length := getLength(email); length < 1 {
+	//     fmt.Println("Email is invalid")
+	// }
+
+	// fmt.Println(integer, boolean, name, floating, age, lastName)
+	// structs
+	func chaeck (){
+		fmt.printf("hello world")
+	}
+
+	person1 := Person{
+		name: "wade", phoneNumber: 123,
+	}
+	fmt.Printf(sayName(person1))
+
+	fmt.Printf("hello world")
 }
