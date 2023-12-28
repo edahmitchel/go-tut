@@ -5,5 +5,5 @@ func main() {
 	// cards.print()
 	cards := newDeckFromFIle("deck")
 	cards.print()
-	cards.saveTofile("deck")
+	cards.saveToFile("deck")
 }
